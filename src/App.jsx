@@ -9,6 +9,7 @@ import Testimonials from './components/testimonials';
 import Team from './components/Team';
 import Contact from './components/contact';
 import JsonData from './data/data.json';
+import Api from './components/Api';
 
 export class App extends Component {
   state = {
@@ -25,6 +26,7 @@ export class App extends Component {
   render() {
     return (
       <div>
+        <Api />
         <Navigation />
         <Header data={this.state.landingPageData.Header} />
         <Features data={this.state.landingPageData.Features} />
