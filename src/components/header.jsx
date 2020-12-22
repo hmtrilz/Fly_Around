@@ -26,6 +26,16 @@ export class Header extends Component {
                     </div>
                 </form>
                   </div>{" "}
+                  <div
+                    href="#features"
+                    className="btn btn-custom btn-lg page-scroll"
+                  >
+                    <form onSubmit={this.handleSubmit} className= 'form'>
+                    <div className='field text-dark'>
+                        <input onChange={this.handleChange} name='video-search' type="text" placeholder="Search.."/>
+                    </div>
+                </form>
+                  </div>{" "}
                 </div>
               </div>
             </div>
