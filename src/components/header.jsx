@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import '../styles/header.css';
 
 export class Header extends Component {
   render() {
@@ -17,53 +16,26 @@ export class Header extends Component {
                   <p>
                     {this.props.data ? this.props.data.paragraph : "Loading"}
                   </p>
-
-                  {/*FORMULÁRIO DE PESQUISA*/}
-                  
-                  <div className="wrapper wrapper--w900">
-                    <div className="card card-6">
-                      <div className="card-body">
-                        <div method= "POST" className="form page-scroll">
-                          <form onSubmit={this.handleSubmit} className= 'form'>
-                            <div className='row2 row-space'>
-                              <div className="col-2">
-                                <div className="input-group">
-                                  <label className="label">From</label>
-                                  <input className="input--style-1" onChange={this.handleChange} name='from' type="text" placeholder="City, Region or Airport" required="required"/>
-                                </div>
-                              </div>
-                              <div className="col-2">
-                                <div className="input-group">
-                                  <label className="label">To</label>
-                                  <input className="input--style-1" onChange={this.handleChange} name='to' type="text" placeholder="City, Region or Airport" required="required"/>
-                                </div>
-                              </div>
-                            </div>
-                            <div className='row2 row-space'>
-                              <div className="col-2">
-                                <div className="input-group">
-                                  <label className="label">Check-In</label>
-                                  <input className="input--style-1" onChange={this.handleChange} name='depart' type="date" placeholder="DD/MM/YYYY" id="input-start"/>
-                                </div>
-                              </div>
-                              <div className="col-2">
-                                <div className="input-group">
-                                  <label className="label">Check-Out</label>
-                                  <input className="input--style-1" onChange={this.handleChange} name='return' type="date" placeholder="DD/MM/YYYY" id="input-end"/>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="row2 row row-space">
-                              <div className="col-2">
-                                <button className="btn-submit m-b-0" type="submit">Search</button>
-                              </div>
-                            </div>
-                          </form>
-                        </div>{" "}
-                      </div>
+                  <div
+                    href="#features"
+                    className="btn btn-custom btn-lg page-scroll"
+                  >
+                    <form onSubmit={this.handleSubmit} className= 'form'>
+                    <div className='field'>
+                        <input onChange={this.handleChange} name='video-search' type="text" placeholder="Search.."/>
                     </div>
-                  </div>
-
+                </form>
+                  </div>{" "}
+                  <div
+                    href="#features"
+                    className="btn btn-custom btn-lg page-scroll"
+                  >
+                    <form onSubmit={this.handleSubmit} className= 'form'>
+                    <div className='field text-dark'>
+                        <input onChange={this.handleChange} name='video-search' type="text" placeholder="Search.."/>
+                    </div>
+                </form>
+                  </div>{" "}
                 </div>
               </div>
             </div>
