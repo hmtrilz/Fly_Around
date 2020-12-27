@@ -8,6 +8,7 @@ import Testimonials from './components/testimonials';
 import Team from './components/Team';
 import Contact from './components/contact';
 import JsonData from './data/data.json';
+import Api from './components/AmadeusApi';
 
 export class App extends Component {
   state = {
@@ -24,6 +25,7 @@ export class App extends Component {
   render() {
     return (
       <div>
+        <Api />
         <Navigation />
         <Header data={this.state.landingPageData.Header} />
         <About data={this.state.landingPageData.About} />
