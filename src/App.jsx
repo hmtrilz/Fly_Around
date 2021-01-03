@@ -1,42 +1,31 @@
-import React, { Component } from 'react'
-import Navigation from './components/navigation';
-import Header from './components/header';
-import About from './components/about';
-import Services from './components/services';
-import Gallery from './components/gallery';
-import Testimonials from './components/testimonials';
+import React, { useState } from 'react'
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import About from './components/About';
+import Services from './components/Services';
+import Gallery from './components/Gallery';
+import Testimonials from './components/Testimonials';
 import Team from './components/Team';
-import Contact from './components/contact';
-import JsonData from './data/data.json';
-import Api from './components/AmadeusApi';
+import Contact from './components/Contact';
+import FlightResults from './components/FlightResults'
 
-export class App extends Component {
-  state = {
-    landingPageData: {},
-  }
-  getlandingPageData() {
-    this.setState({landingPageData : JsonData})
-  }
+function App () {
+  const [apiData, setApiData] = useState (null);
 
-  componentDidMount() {
-    this.getlandingPageData();
-  }
-
-  render() {
-    return (
-      <div>
-        <Api />
-        <Navigation />
-        <Header data={this.state.landingPageData.Header} />
-        <About data={this.state.landingPageData.About} />
-        <Services data={this.state.landingPageData.Services} />
-        <Gallery />
-        <Testimonials data={this.state.landingPageData.Testimonials} />
-        <Team data={this.state.landingPageData.Team} />
-        <Contact data={this.state.landingPageData.Contact} />
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Navigation />
+      <Header apiData={apiData} setApiData={setApiData} />
+      <FlightResults apiData={apiData} />
+      <About />
+      <Services />
+      <Gallery />
+      <Testimonials />
+      <Team />
+      <Contact />
+    </div>
+  )
+  
 }
 
 export default App;

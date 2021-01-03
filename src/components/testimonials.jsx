@@ -1,35 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class testimonials extends Component {
-  render() {
-    return (
-      <div id="testimonials">
-        <div className="container">
-          <div className="section-title text-center">
-            <h2>What our clients say</h2>
-          </div>
-          <div className="row">
-            {this.props.data
-              ? this.props.data.map((d, i) => (
-                  <div key={`${d.name}-${i}`} className="col-md-4">
-                    <div className="testimonial">
-                      <div className="testimonial-image">
-                        {" "}
-                        <img src={d.img} alt="" />{" "}
-                      </div>
-                      <div className="testimonial-content">
-                        <p>"{d.text}"</p>
-                        <div className="testimonial-meta"> - {d.name} </div>
-                      </div>
-                    </div>
-                  </div>
-                ))
-              : "loading"}
+function Testimonials() {
+  return (
+    <div id="testimonials">
+      <div className="container">
+        <div className="section-title text-center">
+          <h2>What our clients say</h2>
+        </div>
+        <div className="row">
+          <div className="testimonial">
+            <div className="testimonial-image">
+              <img src="../../public/img/testimonials/01.jpg" alt="" />
+            </div>
+            <div className="testimonial-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div className="testimonial-meta">
+                <p>Fofinha</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default testimonials;
+export default Testimonials;

@@ -1,26 +1,27 @@
 import React from 'react';
 
-export default function Api() {
-    var Amadeus = require('amadeus');
+export default function Api(origem, destino, ida, volta) {
+  var Amadeus = require('amadeus');
 
-    var amadeus = new Amadeus({
-      clientId: 'lhANIGnLtRogSWGjkoYsQUUYfwGHsURW',
-      clientSecret: 'pUpqyVBSfNJubxwG'
-    });
+  var amadeus = new Amadeus({
+    clientId: 'lhANIGnLtRogSWGjkoYsQUUYfwGHsURW',
+    clientSecret: 'pUpqyVBSfNJubxwG'
+  });
     
-    amadeus.shopping.flightOffersSearch.get({
-        originLocationCode: 'SYD',
-        destinationLocationCode: 'BKK',
-        departureDate: '2021-04-01',
-        adults: '2'
-    }).then(function(response){
-      console.log(response.data);
-    }).catch(function(responseError){
-      console.log(responseError.code);
-    });
+  return amadeus.shopping.flightOffersSearch.get({
+    originLocationCode: origem,
+    destinationLocationCode: destino,
+    departureDate: ida, 
+    returnDate: volta,
+    adults: '1',
+    currencyCode: 'EUR',
+    max: '5'
+  }).then(function(response){
+    return response.data;
+  }).catch(function(responseError){
+    console.log(responseError.code);
+    alert("ERROR: Invalid city or date. Try again.")
+  });
 
-    return (
-        <div></div>
-    )
 }
 
