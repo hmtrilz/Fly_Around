@@ -2,12 +2,16 @@
   "name": "landingpage-react-template",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/styles": "^4.11.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "amadeus": "^5.6.0",
     "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },

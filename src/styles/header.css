@@ -324,12 +324,15 @@ a:active {
   text-transform: uppercase;
   color: #fff;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   margin-top: 38px;
+  border: 0;
+  border-radius: 50px;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 767px) {
