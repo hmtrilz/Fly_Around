@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/flightresults.css';
+import moment from 'moment';
 
 const FlightResults = ({apiData}) => {
     console.log(apiData);
@@ -12,9 +13,9 @@ const FlightResults = ({apiData}) => {
 	                <div class="course">
 		                <div class="course-preview">
                             <h3>{resultado.itineraries[0].segments[0].departure.iataCode} ➔ {resultado.itineraries[1].segments[0].departure.iataCode}</h3> {/*primeiro certo */}
-                            <h6>{resultado.itineraries[0].segments[0].arrival.at}</h6>
+                            <h6>{moment(resultado.itineraries[0].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
                             <h3 className="espaco">{resultado.itineraries[1].segments[0].departure.iataCode} ➔ {resultado.itineraries[0].segments[0].departure.iataCode}</h3>
-                            <h6>{resultado.itineraries[1].segments[0].arrival.at}</h6>
+                            <h6>{moment(resultado.itineraries[1].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
                         </div>
                         <div class="course-info">
                             <table>
