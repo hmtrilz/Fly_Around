@@ -10,9 +10,9 @@ export default function Api(origem, destino, ida, volta) {
     
   return amadeus.shopping.flightOffersSearch.get({
     originLocationCode: origem,
-    destinationLocationCode: destino,
-    departureDate: ida, 
-    returnDate: volta,
+    destinationLocationCode: destino, //mudar para destino
+    departureDate: "2021-02-02", //mudar para ida
+    returnDate: "2021-02-05", //mudar para volta
     adults: '1',
     currencyCode: 'EUR',
     max: '5'
