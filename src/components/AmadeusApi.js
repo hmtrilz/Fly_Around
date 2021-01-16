@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Api(origem, destino, ida, volta) {
   var Amadeus = require('amadeus');
 
@@ -10,9 +8,9 @@ export default function Api(origem, destino, ida, volta) {
     
   return amadeus.shopping.flightOffersSearch.get({
     originLocationCode: origem,
-    destinationLocationCode: "MAD", //mudar para destino
-    departureDate: '2021-03-02', //mudar para ida
-    returnDate: '2021-03-23', //mudar para volta
+    destinationLocationCode: destino, 
+    departureDate: ida, 
+    returnDate: volta, 
     adults: '1',
     currencyCode: 'EUR',
     max: '5'

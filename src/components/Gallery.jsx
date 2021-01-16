@@ -136,69 +136,6 @@ function Gallery() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-md-4 col-lg-4">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {" "}
-                  <a
-                    href="img/portfolio/portugal.jpg"
-                    title="Portugal"
-                    data-lightbox-gallery="gallery1"
-                  >
-                    <div className="hover-text">
-                      <h4>Portugal</h4>
-                    </div>
-                    <img
-                      src="img/portfolio/portugal.jpg"
-                      className="img-responsive"
-                      alt="Portugal"
-                    />{" "}
-                  </a>{" "}
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-md-4 col-lg-4">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {" "}
-                  <a
-                    href="img/portfolio/brazil.jpg"
-                    title="Brazil"
-                    data-lightbox-gallery="gallery1"
-                  >
-                    <div className="hover-text">
-                      <h4>Brazil</h4>
-                    </div>
-                    <img
-                      src="img/portfolio/brazil.jpg"
-                      className="img-responsive"
-                      alt="Brazil"
-                    />{" "}
-                  </a>{" "}
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-md-4 col-lg-4">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {" "}
-                  <a
-                    href="img/portfolio/spain.jpg"
-                    title="Spain"
-                    data-lightbox-gallery="gallery1"
-                  >
-                    <div className="hover-text">
-                      <h4>Spain</h4>
-                    </div>
-                    <img
-                      src="img/portfolio/spain.jpg"
-                      className="img-responsive"
-                      alt="Spain"
-                    />{" "}
-                  </a>{" "}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
