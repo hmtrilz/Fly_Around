@@ -1,32 +1,30 @@
-//npm i para instalar todos os ficheiros no json
+import React, { useState } from 'react'
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import About from './components/About';
+import Services from './components/Services';
+import Destinations from './components/Destinations';
+import Contact from './components/Contact';
+import FlightResults from './components/FlightResults';
+import HotelResults from './components/HotelResults';
 
-import React, { useState } from "react";
-import Navigation from "./components/Navigation";
-import Header from "./components/Header";
-import About from "./components/About";
-import Services from "./components/Services";
-import Gallery from "./components/Gallery";
-import Testimonials from "./components/Testimonials";
-import Team from "./components/Team";
-import Contact from "./components/Contact";
-import FlightResults from "./components/FlightResults";
-
-function App() {
-  const [apiData, setApiData] = useState(null);
+function App () {
+  const [apiData, setApiData] = useState (null);
+  const [hotelData, setHotelData] = useState (null);
 
   return (
     <div>
       <Navigation />
-      <Header apiData={apiData} setApiData={setApiData} />
+      <Header apiData={apiData} setApiData={setApiData} hotelData={hotelData} setHotelData={setHotelData}/>
       <FlightResults apiData={apiData} />
+      <HotelResults hotelData={hotelData} />
       <About />
       <Services />
-      <Gallery />
-      <Testimonials />
-      <Team />
+      <Destinations />
       <Contact />
     </div>
-  );
+  )
+  
 }
 
 export default App;

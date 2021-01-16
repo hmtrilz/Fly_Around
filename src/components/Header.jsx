@@ -3,8 +3,9 @@ import Api from "./AmadeusApi";
 import "../styles/header.css";
 import AirportsList from "./airports.json";
 import AutoComplete from "./AutoComplete";
+import HotelApi from './HotelApi';
 
-const Header = ({ apiData, setApiData }) => {
+const Header = ({ apiData, setApiData, hotelData, setHotelData }) => {
   const formHandler = async (e) => {
     e.preventDefault();
     let resultados = await Api(
@@ -15,6 +16,16 @@ const Header = ({ apiData, setApiData }) => {
     );
     setApiData(resultados);
   };
+
+  const formHandler2 = async e => {
+    e.preventDefault();
+    let hotel = await HotelApi (
+      e.target.form[1].value, 
+      e.target.form[2].value, 
+      e.target.form[3].value
+    );
+    setHotelData(hotel);
+  }
 
   return (
     <header id="header">
@@ -81,7 +92,7 @@ const Header = ({ apiData, setApiData }) => {
                         <div className="row row-space">
                           <div className="col-2">
                             <button
-                              onClick={formHandler}
+                              onClick={formHandler, formHandler2}
                               className="btn-submit m-b-0"
                               type="submit"
                             >
