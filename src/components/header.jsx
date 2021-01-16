@@ -1,12 +1,19 @@
 import React from "react";
 import Api from './AmadeusApi'
 import '../styles/header.css';
+import HotelApi from './HotelApi';
 
-const Header = ({apiData, setApiData}) => {
+const Header = ({apiData, setApiData, hotelData, setHotelData}) => {
   const formHandler = async e => {
     e.preventDefault();
     let resultados = await Api (e.target.form[0].value, e.target.form[1].value, e.target.form[2].value, e.target.form[3].value);
     setApiData (resultados);
+  }
+
+  const formHandler2 = async e => {
+    e.preventDefault();
+    let hotel = await HotelApi (e.target.form[1].value, e.target.form[2].value, e.target.form[3].value);
+    setHotelData(hotel);
   }
 
   return (
@@ -55,7 +62,7 @@ const Header = ({apiData, setApiData}) => {
                         </div>
                         <div className="row row-space">
                           <div className="col-2">
-                            <button onClick={formHandler} className="btn-submit m-b-0" type="submit">Search</button>
+                            <button onClick={formHandler, formHandler2} className="btn-submit m-b-0" type="submit">Search</button>
                           </div>
                         </div>
                       </form>

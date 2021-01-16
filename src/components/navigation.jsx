@@ -34,17 +34,22 @@ function Navigation() {
               </a>
             </li>
             <li>
-              <a href="#services" className="page-scroll">
+              <a href="#flights" className="page-scroll">
                 Flights
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="page-scroll">
+              <a href="#services" className="page-scroll">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#destinations" className="page-scroll">
                 Destinations
               </a>
             </li>
             <li>
-              <a href="#team" className="page-scroll">
+              <a href="#hotels" className="page-scroll">
                 Hotels
               </a>
             </li>

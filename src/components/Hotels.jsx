@@ -1,11 +1,11 @@
 import React from "react";
 
-function Testimonials() {
+function Hotels() {
   return (
-    <div id="testimonials">
+    <div id="hotels">
       <div className="container">
         <div className="section-title text-center">
-          <h2>What our clients say</h2>
+          <h2>Hotels</h2>
         </div>
         <div className="row">
           <div className="testimonial">
@@ -25,4 +25,4 @@ function Testimonials() {
   );
 }
 
-export default Testimonials;
+export default Hotels;

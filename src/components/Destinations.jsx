@@ -1,8 +1,8 @@
 import React from "react";
 
-function Gallery() {
+function Destinations() {
   return (
-    <div id="portfolio" className="text-center">
+    <div id="destinations" className="text-center">
       <div className="container">
         <div className="section-title">
           <h2>Destinations</h2>
@@ -205,4 +205,4 @@ function Gallery() {
     </div>
   );
 }
-export default Gallery;
+export default Destinations;
