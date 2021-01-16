@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import AutoCompleteItem from "./AutoCompleteItem";
-import AirportsList from "./airports.json";
 
 const AutoComplete = ({ data }) => {
   const [isVisible, setVisible] = useState(false);
