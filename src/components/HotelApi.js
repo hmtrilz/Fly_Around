@@ -10,10 +10,11 @@ export default function HotelApi(destino, ida, volta) {
     cityCode: destino,
     checkInDate: ida, 
     checkOutDate: volta, 
-    adults: '1',
+    adults: '2',
     currency: 'EUR'
   }).then(function(response){
     console.log(response.data);
+    return response.data
   })
 
 }

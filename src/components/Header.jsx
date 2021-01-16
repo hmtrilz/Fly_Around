@@ -1,11 +1,11 @@
 import React from "react";
 import Api from "./AmadeusApi";
 import "../styles/header.css";
-import AirportsList from "./airports.json";
+import AirportsList from "../airports.json";
 import AutoComplete from "./AutoComplete";
 import HotelApi from './HotelApi';
 
-const Header = ({ apiData, setApiData, hotelData, setHotelData }) => {
+const Header = ({ setApiData, setHotelData }) => {
   const formHandler = async (e) => {
     e.preventDefault();
     let resultados = await Api(
@@ -24,7 +24,9 @@ const Header = ({ apiData, setApiData, hotelData, setHotelData }) => {
       e.target.form[2].value, 
       e.target.form[3].value
     );
+    console.log(hotel);
     setHotelData(hotel);
+    
   }
 
   return (
@@ -37,14 +39,14 @@ const Header = ({ apiData, setApiData, hotelData, setHotelData }) => {
                 <h1>
                   What's next?<span></span>
                 </h1>
-                <p className="text-light">
+                <p style={{fontWeight: 'normal'}}>
                   Find the cheapest flights and hotels and take off!
                 </p>
                 {/*FORMULÁRIO DE PESQUISA*/}
                 <div className="wrapper wrapper--w900">
                   <div className="card card-6">
                     <div className="card-body">
-                      <form form method="POST" action="#">
+                      <form action="#">
                         <div className="row row-space">
                           <div className="col-2">
                             <div className="input-group">
@@ -92,7 +94,7 @@ const Header = ({ apiData, setApiData, hotelData, setHotelData }) => {
                         <div className="row row-space">
                           <div className="col-2">
                             <button
-                              onClick={formHandler, formHandler2}
+                              onClick={(e) => {formHandler (e); formHandler2(e)}}
                               className="btn-submit m-b-0"
                               type="submit"
                             >

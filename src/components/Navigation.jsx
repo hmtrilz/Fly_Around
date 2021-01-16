@@ -35,7 +35,7 @@ function Navigation() {
             </li>
             <li>
               <a href="#services" className="page-scroll">
-                Flights
+                How It Works
               </a>
             </li>
             <li>
@@ -43,12 +43,6 @@ function Navigation() {
                 Destinations
               </a>
             </li>
-            <li>
-              <a href="#team" className="page-scroll">
-                Hotels
-              </a>
-            </li>
-            
             <li>
               <a href="#contact" className="page-scroll">
                 Contact

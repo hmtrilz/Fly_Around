@@ -6,7 +6,7 @@ function Gallery() {
       <div className="container">
         <div className="section-title">
           <h2>Destinations</h2>
-          <p>Do you want some suggestions? Explore with us!</p>
+          <p>Do you want some suggestions? Find out the best countries to visit</p>
         </div>
         <div className="row">
           <div className="portfolio-items">

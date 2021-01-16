@@ -5,7 +5,6 @@ const AutoComplete = ({ data }) => {
   const [isVisible, setVisible] = useState(false);
   const [search, setSearch] = useState("");
   const [cursor, setCursor] = useState(-1);
-  // const [cursor, setCursor] = useState(-1);
 
   const searchContainer = useRef(null);
   const searchResultRef = useRef(null);
@@ -82,7 +81,7 @@ const AutoComplete = ({ data }) => {
           name="from"
           id="search"
           type="text"
-          placeholder="City"
+          placeholder="City Airport"
           value={search}
           autoComplete="off"
           onClick={showSuggestion}
