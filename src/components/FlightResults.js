@@ -9,10 +9,10 @@ const FlightResults = ({apiData}) => {
         <>
         {apiData && (
             apiData.map((resultado) => (
-                <div id="flights" className="corpo">
-	                <div className="course">
-		                <div className="course-preview">
-                            <h3>{resultado.itineraries[0].segments[0].departure.iataCode} ➔ {resultado.itineraries[1].segments[0].departure.iataCode}</h3>
+                <div class="corpo">
+	                <div class="course">
+		                <div class="course-preview">
+                            <h3>{resultado.itineraries[0].segments[0].departure.iataCode} ➔ {resultado.itineraries[1].segments[0].departure.iataCode}</h3> {/*primeiro certo */}
                             <h6>{moment(resultado.itineraries[0].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
                             <h3 className="espaco">{resultado.itineraries[1].segments[0].departure.iataCode} ➔ {resultado.itineraries[0].segments[0].departure.iataCode}</h3>
                             <h6>{moment(resultado.itineraries[1].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>

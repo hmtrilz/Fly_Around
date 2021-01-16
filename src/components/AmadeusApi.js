@@ -7,12 +7,12 @@ export default function Api(origem, destino, ida, volta) {
     clientId: 'lhANIGnLtRogSWGjkoYsQUUYfwGHsURW',
     clientSecret: 'pUpqyVBSfNJubxwG'
   });
-      
+    
   return amadeus.shopping.flightOffersSearch.get({
     originLocationCode: origem,
-    destinationLocationCode: destino, 
-    departureDate: ida, 
-    returnDate: volta, 
+    destinationLocationCode: "MAD", //mudar para destino
+    departureDate: '2021-03-02', //mudar para ida
+    returnDate: '2021-03-23', //mudar para volta
     adults: '1',
     currencyCode: 'EUR',
     max: '5'
