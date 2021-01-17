@@ -13,7 +13,7 @@ function How() {
             <i className="fa fas fa-search"></i>
             <div className="service-desc">
               <h3>Search Form</h3>
-              <p>Fill in the search form with the city airports, select a departure and a return date and submit</p>
+              <p>Fill in the search form with cities, select a departure and a return date and submit</p>
             </div>
           </div>
           <div className="col-md-4">

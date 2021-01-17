@@ -4,7 +4,7 @@ import moment from 'moment';
 
 const FlightResults = ({apiData}) => {
     console.log(apiData);
-
+    
     return(
         <>
         {apiData && (
@@ -36,8 +36,8 @@ const FlightResults = ({apiData}) => {
                             </table>
                             <div className="mover">
                                 <p className="price">{resultado.price.total}€</p>
+                                <button className="btn">More info</button>
                             </div>
-                            <button className="btn">More info</button>
                         </div>
                     </div>
                 </div>))

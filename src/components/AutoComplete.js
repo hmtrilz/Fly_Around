@@ -81,7 +81,7 @@ const AutoComplete = ({ data }) => {
           name="from"
           id="search"
           type="text"
-          placeholder="City Airport"
+          placeholder="City code"
           value={search}
           autoComplete="off"
           onClick={showSuggestion}
