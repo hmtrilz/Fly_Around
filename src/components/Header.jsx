@@ -48,47 +48,39 @@ const Header = ({ setApiData, setHotelData }) => {
                     <div className="card-body">
                       <form action="#">
                         <div className="row row-space">
-                          <div className="col-2">
-                            <div className="input-group">
-                              <label className="label">From</label>
-                              <AutoComplete data={AirportsList} />
-                            </div>
+                          <div className="col-2 input-group">
+                            <label className="label">From</label>
+                            <AutoComplete data={AirportsList} />
                           </div>
                           <div id="match-list"></div>
-                          <div className="col-2">
-                            <div className="input-group">
-                              <label className="label">To</label>
-                              <AutoComplete data={AirportsList} />
-                            </div>
+                          <div className="col-2 input-group">
+                            <label className="label">To</label>
+                            <AutoComplete data={AirportsList} />
                           </div>
                           <div id="match-list"></div>
                         </div>
                         <div className="row row-space">
-                          <div className="col-2">
-                            <div className="input-group">
-                              <label className="label">Depart</label>
-                              <input
-                                className="input--style-1"
-                                name="depart"
-                                type="date"
-                                placeholder="DD/MM/YYYY"
-                                id="input-start"
-                                required="required"
-                              />
-                            </div>
+                          <div className="col-2 input-group">
+                            <label className="label">Depart</label>
+                            <input
+                              className="input--style-1"
+                              name="depart"
+                              type="date"
+                              placeholder="DD/MM/YYYY"
+                              id="input-start"
+                              required="required"
+                            />
                           </div>
-                          <div className="col-2">
-                            <div className="input-group">
-                              <label className="label">Return</label>
-                              <input
-                                className="input--style-1"
-                                name="return"
-                                type="date"
-                                placeholder="DD/MM/YYYY"
-                                id="input-end"
-                                required="required"
-                              />
-                            </div>
+                          <div className="col-2 input-group">
+                            <label className="label">Return</label>
+                            <input
+                              className="input--style-1"
+                              name="return"
+                              type="date"
+                              placeholder="DD/MM/YYYY"
+                              id="input-end"
+                              required="required"
+                            />
                           </div>
                         </div>
                         <div className="row row-space">
