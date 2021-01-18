@@ -27,17 +27,17 @@ function Navigation() {
           id="bs-example-navbar-collapse-1"
         >
           <ul className="nav navbar-nav navbar-right">
-            
-            <li>
-              <a href="#about" className="page-scroll">
-                About
-              </a>
-            </li>
             <li>
               <a href="#services" className="page-scroll">
                 Flights
               </a>
             </li>
+            <li>
+              <a href="#about" className="page-scroll">
+                About
+              </a>
+            </li>
+
             <li>
               <a href="#portfolio" className="page-scroll">
                 Destinations
@@ -48,7 +48,7 @@ function Navigation() {
                 Hotels
               </a>
             </li>
-            
+
             <li>
               <a href="#contact" className="page-scroll">
                 Contact

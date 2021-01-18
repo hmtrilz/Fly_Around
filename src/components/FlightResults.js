@@ -2,22 +2,24 @@ import React from 'react';
 import '../styles/flightresults.css';
 import moment from 'moment';
 
+
+
 const FlightResults = ({apiData}) => {
-    console.log(apiData);
+
 
     return(
         <>
         {apiData && (
             apiData.map((resultado) => (
-                <div class="corpo">
-	                <div class="course">
-		                <div class="course-preview">
+                <div className="corpo">
+	                <div className="course">
+		                <div className="course-preview">
                             <h3>{resultado.itineraries[0].segments[0].departure.iataCode} ➔ {resultado.itineraries[1].segments[0].departure.iataCode}</h3> {/*primeiro certo */}
                             <h6>{moment(resultado.itineraries[0].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
                             <h3 className="espaco">{resultado.itineraries[1].segments[0].departure.iataCode} ➔ {resultado.itineraries[0].segments[0].departure.iataCode}</h3>
                             <h6>{moment(resultado.itineraries[1].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
                         </div>
-                        <div class="course-info">
+                        <div className="course-info">
                             <table>
                                 <tr>
                                     <th className="pad2">Scale</th>
@@ -37,7 +39,7 @@ const FlightResults = ({apiData}) => {
                             <div className="mover">
                                 <p className="price">{resultado.price.total}€</p>
                             </div>
-                            <button class="btn">More info</button>
+                            <button className="btn">More info</button>
                         </div>
                     </div>
                 </div>))
