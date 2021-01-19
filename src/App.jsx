@@ -7,20 +7,23 @@ import Destinations from './components/Destinations';
 import Contact from './components/Contact';
 import FlightResults from './components/FlightResults';
 import HotelResults from './components/HotelResults';
+import RandomCountry from './components/RandomCountry';
 
 function App () {
   const [apiData, setApiData] = useState (null);
   const [hotelData, setHotelData] = useState (null);
+  const [country, setCountry] = useState ();
 
   return (
     <div>
       <Navigation />
-      <Header apiData={apiData} setApiData={setApiData} hotelData={hotelData} setHotelData={setHotelData}/>
+      <Header setApiData={setApiData} setHotelData={setHotelData}/>
       <FlightResults apiData={apiData} />
       <HotelResults hotelData={hotelData} />
       <About />
       <How />
-      <Destinations />
+      <Destinations setCountry={setCountry} />
+      <RandomCountry country={country} />
       <Contact />
     </div>
   )
