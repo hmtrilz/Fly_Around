@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import Navigation from './components/Navigation';
-import Header from './components/Header';
-import About from './components/About';
-import How from './components/How';
-import Destinations from './components/Destinations';
-import Contact from './components/Contact';
-import FlightResults from './components/FlightResults';
-import HotelResults from './components/HotelResults';
-import DestinationsItem from './components/DestinationsItem';
-import BingApi from './components/BingApi';
+import Navigation from './pages/Navigation';
+import Header from './pages/Header';
+import About from './pages/About';
+import How from './pages//How';
+import Destinations from './pages/Destinations';
+import Results from './pages/Results';
+import Contact from './pages/Contact';
+import DestinationsItem from './pages/DestinationsItem';
+import BingApi from './pages/BingApi';
+
 
 function App () {
   const [apiData, setApiData] = useState (null);
@@ -19,14 +19,13 @@ function App () {
     <div>
       <Navigation />
       <Header setApiData={setApiData} setHotelData={setHotelData}/>
-      <FlightResults apiData={apiData} />
-      <HotelResults hotelData={hotelData} />
       <About />
       <How />
       <Destinations setCountry={setCountry} />
       <DestinationsItem country={country}/>
       <BingApi country={country} />
       <Contact />
+      <Results />
     </div>
   )
   
