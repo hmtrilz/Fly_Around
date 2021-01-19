@@ -1,0 +1,9 @@
+.countrytitle {
+  text-align: center;
+  padding: 6rem;
+  padding-bottom: 70px;
+  font-size: 50px;
+  background: -webkit-radial-gradient(#6372ff, #5ca9fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

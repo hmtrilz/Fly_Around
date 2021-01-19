@@ -7,6 +7,7 @@ const FlightResults = ({apiData}) => {
     
     return(
         <>
+        
         {apiData && (
             apiData.map((resultado) => (
                 <div id="flights" className="corpo">
