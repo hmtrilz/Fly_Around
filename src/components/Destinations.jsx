@@ -16,7 +16,7 @@ const Destinations = ({setCountry}) => {
         <div className="section-title">
           <h2>Destinations</h2>
           <p>Want to travel but don't know where to go?</p>
-          <p>Allow this random country generator to decide your fate. What could possibly go wrong?</p> 
+          <p>Allow this random destination generator to decide your fate. What could possibly go wrong?</p> 
         </div>
         <div>
           <button className="botao" onClick={PaisRandom}>Generate my destination</button>

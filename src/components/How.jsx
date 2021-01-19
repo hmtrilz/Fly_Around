@@ -19,15 +19,16 @@ function How() {
           <div className="col-md-4">
             <i className="fa fas fa-plane"></i>
             <div className="service-desc">
-              <h3>Flights</h3>
-              <p>Check the list of the best 5 flight offers right below the form</p>
+              <h3>Flights & Hotels</h3>
+              <p>Check the list of the best 5 flight offers and the latest and cheapest hotels</p>
             </div>
           </div>
           <div className="col-md-4">
-            <i className="fa fas fa-hotel"></i>
+            <i className="fa fas fa-globe"></i>
             <div className="service-desc">
-              <h3>Hotels</h3>
-              <p>Check the latest and cheapest hotel offers below the flights list</p>
+              <h3>Random Destination</h3>
+              <p>Don't know where to go?</p>
+              <p>Try our random destination generator</p>
             </div>
           </div>
         </div>
