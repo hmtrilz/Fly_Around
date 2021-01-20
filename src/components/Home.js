@@ -9,8 +9,7 @@ import ImageApi from './ImageApi';
 import FlightResults from "./FlightResults";
 import HotelResults from "./HotelResults";
 
-function Home() {
-  const [apiData, setApiData] = useState(null);
+function Home({ apiData, setApiData }) {
   const [hotelData, setHotelData] = useState(null);
   const [country, setCountry] = useState();
 

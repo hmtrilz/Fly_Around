@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/results.css";
 import moment from "moment";
 import { Link } from "react-router-dom";
@@ -55,7 +55,7 @@ const FlightResults = ({ apiData, loading }) => {
                 </table>
                 <div className="mover">
                   <p className="price">{resultado.price.total}€</p>
-                  <Link to={`/moreinfo`}>
+                  <Link to={`/${resultado.itineraries[0].segments[0].departure.iataCode}${resultado.itineraries[1].segments[0].departure.iataCode}${resultado.id}`}>
                     <button className="btn">More info</button>
                   </Link>
                 </div>
