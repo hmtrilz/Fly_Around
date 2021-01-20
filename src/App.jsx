@@ -1,34 +1,19 @@
-import React, { useState } from 'react'
-import Navigation from './components/Navigation';
-import Header from './components/Header';
-import About from './components/About';
-import How from './components/How';
-import Destinations from './components/Destinations';
-import Contact from './components/Contact';
-import FlightResults from './components/FlightResults';
-import HotelResults from './components/HotelResults';
-import ImageApi from './components/ImageApi';
+import React from "react";
+import FlightResultsItem from "./components/FlightResultsItem";
+import Home from "./components/Home";
+import { Route, BrowserRouter as Router, Link, Switch } from "react-router-dom";
 
-
-function App () {
-  const [apiData, setApiData] = useState (null);
-  const [hotelData, setHotelData] = useState (null);
-  const [country, setCountry] = useState ();
-
+function App() {
   return (
-    <div>
-      <Navigation />
-      <Header setApiData={setApiData} setHotelData={setHotelData}/>
-      <FlightResults apiData={apiData} />
-      <HotelResults hotelData={hotelData} />
-      <About />
-      <How />
-      <Destinations setCountry={setCountry} />
-      <ImageApi country={country} />
-      <Contact />
-    </div>
-  )
-  
+    <Router>
+      <div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/moreinfo" component={FlightResultsItem} />  
+      </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
