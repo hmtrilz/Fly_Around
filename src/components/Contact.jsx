@@ -63,7 +63,7 @@ function Contact() {
                 <span>
                   <i className="fa fa-map-marker"></i> Address
                 </span>
-                4321 California St, San Francisco, CA 12345 
+                Universidade de Aveiro, 3810-193 Aveiro
               </p>
             </div>
             <div className="contact-item">
@@ -71,7 +71,7 @@ function Contact() {
                 <span>
                   <i className="fa fa-phone"></i> Phone
                 </span>{" "}
-                +1 123 456 1234
+                +351 123 456 789
               </p>
             </div>
             <div className="contact-item">
@@ -79,7 +79,10 @@ function Contact() {
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
                 </span>{" "}
-                info@company.com
+                mclara1@ua.pt
+              </p>
+              <p>
+                beatrizso1@ua.pt
               </p>
             </div>
           </div>
@@ -89,7 +92,7 @@ function Contact() {
                 <ul>
                   <li>
                     <a
-                      href="fb"
+                      href="https://www.facebook.com/ProgrammersMemes/posts/2912817602145497"
                     >
                       <i className="fa fa-facebook"></i>
                     </a>

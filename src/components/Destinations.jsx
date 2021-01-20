@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/destinations.css";
 import CountriesList from '../countries.json';
+import '../styles/countries.css';
 
 const Destinations = ({setCountry}) => {
   const PaisRandom = () => {
