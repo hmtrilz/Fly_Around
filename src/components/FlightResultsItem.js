@@ -1,8 +1,14 @@
 import React from 'react';
 import moment from 'moment';
-
+import { Link, useLocation } from "react-router-dom";
 
 const FlightResultsItem = ({apiData}) => {
+    const location = useLocation();
+    const pathID = location.pathname.split("/")[1];
+
+    console.log(location);
+    console.log(pathID);
+
     console.log("ola");
     console.log(apiData);
     return(
@@ -22,33 +28,35 @@ const FlightResultsItem = ({apiData}) => {
                             <span className="icon-bar"></span>{" "}
                             <span className="icon-bar"></span>{" "}
                         </button>
-                        <a className="navbar-brand page-scroll" href="#page-top">
-                        Fly Around
-                        </a>{" "}
+                        <Link to={"/"}>
+                            <a className="navbar-brand page-scroll">
+                            Fly Around
+                            </a>{" "}
+                        </Link>
                     </div>
                 </div>
             </nav>
             
 
             {apiData && (
-                apiData.map((resultado) => (
+                apiData.filter((item) => item.id === pathID).map((item) => (
                     <div>
                         <div>
                             <div className="flightitem">
-                                <h4>{resultado.validatingAirlineCodes[0]} Airline</h4>
+                                <h4>{item.validatingAirlineCodes[0]} Airline</h4>
 
                                 <h2>Departure Flight</h2>
-                                <h1>{resultado.itineraries[0].segments[0].departure.iataCode} ➔ {resultado.itineraries[1].segments[0].departure.iataCode}</h1>
-                                <h6>Departure: {moment(resultado.itineraries[0].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
-                                <h4>Flight duration {resultado.itineraries[0].duration}</h4>
-                                <h4>{resultado.itineraries[0].segments.length - 1} Scale(s)</h4>
+                                <h1>{item.itineraries[0].segments[0].departure.iataCode} ➔ {item.itineraries[1].segments[0].departure.iataCode}</h1>
+                                <h6>Departure: {moment(item.itineraries[0].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
+                                <h4>Flight duration {item.itineraries[0].duration}</h4>
+                                <h4>{item.itineraries[0].segments.length - 1} Scale(s)</h4>
                                 
                                 
                                 <h2 className="espaco">Return Flight</h2>
-                                <h1>{resultado.itineraries[1].segments[0].departure.iataCode} ➔ {resultado.itineraries[0].segments[0].departure.iataCode}</h1>
-                                <h6>Departure: {moment(resultado.itineraries[1].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
-                                <h4>Flight duration {resultado.itineraries[1].duration}</h4>
-                                <h4>{resultado.itineraries[1].segments.length - 1} Scale(s)</h4>
+                                <h1>{item.itineraries[1].segments[0].departure.iataCode} ➔ {item.itineraries[0].segments[0].departure.iataCode}</h1>
+                                <h6>Departure: {moment(item.itineraries[1].segments[0].arrival.at).format('DD/MM/YYYY   h:mm a')}</h6>
+                                <h4>Flight duration {item.itineraries[1].duration}</h4>
+                                <h4>{item.itineraries[1].segments.length - 1} Scale(s)</h4>
 
                             </div>
                             <div>
@@ -60,8 +68,8 @@ const FlightResultsItem = ({apiData}) => {
                                 <p>Restrictions may be placed on smaller passengers traveling alone.</p>
                             </div>
                             <div>
-                                <h6>Only {resultado.numberOfBookableSeats} seats available!</h6>
-                                <button className="btn">Buy</button>
+                                <h6>Only {item.numberOfBookableSeats} seats available!</h6>
+                                <button className="btn">Book Flight</button>
                             </div>
                         </div>
                     </div>)
