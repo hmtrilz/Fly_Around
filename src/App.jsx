@@ -1,33 +1,18 @@
-import React, { useState } from "react";
-import Navigation from "./components/Navigation";
-import Header from "./components/Header";
-import About from "./components/About";
-import How from "./components/How";
-import Destinations from "./components/Destinations";
-import Contact from "./components/Contact";
-import DestinationsItem from "./components/DestinationsItem";
-import BingApi from "./components/BingApi";
-import FlightResults from "./components/FlightResults";
-import HotelResults from "./components/HotelResults";
+import React from "react";
+import FlightResultsItem from "./components/FlightResultsItem";
+import Home from "./components/Home";
+import { Route, BrowserRouter as Router, Link, Switch } from "react-router-dom";
 
 function App() {
-  const [apiData, setApiData] = useState(null);
-  const [hotelData, setHotelData] = useState(null);
-  const [country, setCountry] = useState();
-
   return (
-    <div>
-      <Navigation />
-      <Header setApiData={setApiData} setHotelData={setHotelData} />
-      <FlightResults apiData={apiData} />
-      <HotelResults hotelData={hotelData} />
-      <About />
-      <How />
-      <Destinations setCountry={setCountry} />
-      <DestinationsItem country={country} />
-      <BingApi country={country} />
-      <Contact />
-    </div>
+    <Router>
+      <div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/moreinfo" component={FlightResultsItem} />  
+      </Switch>
+      </div>
+    </Router>
   );
 }
 
