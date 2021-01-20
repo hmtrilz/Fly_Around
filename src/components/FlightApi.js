@@ -1,4 +1,4 @@
-export default function FlightsApi(origem, destino, ida, volta) {
+export default function FlightApi(origem, destino, ida, volta) {
   var Amadeus = require('amadeus');
 
   var amadeus = new Amadeus({

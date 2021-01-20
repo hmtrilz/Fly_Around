@@ -5,8 +5,7 @@ import About from "./About";
 import How from "./How";
 import Destinations from "./Destinations";
 import Contact from "./Contact";
-import DestinationsItem from "./DestinationsItem";
-import BingApi from "./BingApi";
+import ImageApi from './ImageApi';
 import FlightResults from "./FlightResults";
 import HotelResults from "./HotelResults";
 
@@ -24,8 +23,7 @@ function Home() {
       <About />
       <How />
       <Destinations setCountry={setCountry} />
-      <DestinationsItem country={country} />
-      <BingApi country={country} />
+      <ImageApi country={country} />
       <Contact />
     </div>
   );

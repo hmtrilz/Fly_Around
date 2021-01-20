@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "../styles/results.css";
 import moment from "moment";
-import FlightResultsItem from "./FlightResultsItem";
-import Home from "./Home";
 import { Link } from "react-router-dom";
 
 const FlightResults = ({ apiData, loading }) => {

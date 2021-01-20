@@ -1,10 +1,9 @@
 import React, {useState} from "react";
-import Api from "./AmadeusApi";
+import FlightApi from "./FlightApi";
 import "../styles/header.css";
 import AirportsList from "../airports.json";
 import AutoComplete from "./AutoComplete";
 import HotelApi from "./HotelApi";
-
 
 
 const Header = ({ setApiData, setHotelData }) => {
@@ -13,7 +12,7 @@ const Header = ({ setApiData, setHotelData }) => {
   
   const formHandler = async (e) => {
     e.preventDefault();
-    let resultados = await Api(
+    let resultados = await FlightApi(
       e.target.form[0].value,
       e.target.form[1].value,
       e.target.form[2].value,
