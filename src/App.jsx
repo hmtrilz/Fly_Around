@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Navigation from "./pages/Navigation";
 import Header from "./pages/Header";
@@ -14,11 +15,33 @@ function App() {
   const [apiData, setApiData] = useState(null);
   const [hotelData, setHotelData] = useState(null);
   const [country, setCountry] = useState();
+=======
+import React, { useState } from 'react'
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import About from './components/About';
+import How from './components/How';
+import Destinations from './components/Destinations';
+import Contact from './components/Contact';
+import FlightResults from './components/FlightResults';
+import HotelResults from './components/HotelResults';
+import DestinationsItem from './components/DestinationsItem';
+import BingApi from './components/BingApi';
+
+function App () {
+  const [apiData, setApiData] = useState (null);
+  const [hotelData, setHotelData] = useState (null);
+  const [country, setCountry] = useState ();
+>>>>>>> parent of 8d9120d... router
 
   return (
     <div>
       <Navigation />
+<<<<<<< HEAD
       <Header setApiData={setApiData} setHotelData={setHotelData} />
+=======
+      <Header setApiData={setApiData} setHotelData={setHotelData}/>
+>>>>>>> parent of 8d9120d... router
       <FlightResults apiData={apiData} />
       <HotelResults hotelData={hotelData} />
       <About />
