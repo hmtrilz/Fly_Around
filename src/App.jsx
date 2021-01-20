@@ -7,8 +7,8 @@ import Destinations from './components/Destinations';
 import Contact from './components/Contact';
 import FlightResults from './components/FlightResults';
 import HotelResults from './components/HotelResults';
-import DestinationsItem from './components/DestinationsItem';
-import BingApi from './components/BingApi';
+import ImageApi from './components/ImageApi';
+
 
 function App () {
   const [apiData, setApiData] = useState (null);
@@ -24,8 +24,7 @@ function App () {
       <About />
       <How />
       <Destinations setCountry={setCountry} />
-      <DestinationsItem country={country}/>
-      <BingApi country={country} />
+      <ImageApi country={country} />
       <Contact />
     </div>
   )
