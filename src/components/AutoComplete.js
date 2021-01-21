@@ -41,7 +41,8 @@ const AutoComplete = ({ data }) => {
     return data.filter(
       (item) =>
         item.country.toLowerCase().includes(search.toLowerCase()) ||
-        item.city.toLowerCase().includes(search.toLowerCase()) 
+        item.city.toLowerCase().includes(search.toLowerCase()) ||
+        item.iata_code.toLowerCase().includes(search.toLowerCase())
     );
   }, [data, search]);
 
@@ -82,7 +83,7 @@ const AutoComplete = ({ data }) => {
         name="from"
         id="search"
         type="text"
-        placeholder="City IATA code"
+        placeholder="City, country or IATA code"
         value={search}
         autoComplete="off"
         onClick={showSuggestion}

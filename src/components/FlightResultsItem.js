@@ -24,10 +24,14 @@ const FlightResultsItem = ({ apiData }) => {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
-            </button>
+            </button> 
+           
             <Link to={"/"}>
-              <a className="navbar-brand page-scroll">Fly Around</a>
-            </Link>
+                <a className="navbar-brand page-scroll">{" "}Fly Around</a>
+           </Link>
+           <Link to={"/"}>
+                <h5 className="navbar-brand goback page-scroll">{" "}Go back</h5>
+           </Link>
           </div>
         </div>
       </nav>
@@ -51,7 +55,7 @@ const FlightResultsItem = ({ apiData }) => {
                 {/* partida */}
                 <div className="info">
                   <div id="flights" className="flightitem">
-                    <h4> From </h4>
+                    <h4> From: </h4>
                     <div className="flightbox">
                       <div className="course-preview">
                         <h3>
@@ -84,7 +88,7 @@ const FlightResultsItem = ({ apiData }) => {
 
                   {/* chegada */}
                   <div id="resultsitem" className="flightitem">
-                    <h4> To </h4>
+                    <h4> To: </h4>
                     <div className="flightbox">
                       <div className="course-preview">
                         <h3>
@@ -112,6 +116,17 @@ const FlightResultsItem = ({ apiData }) => {
                           </tr>
                         </table2>
                       </div>
+                    </div>
+                  </div>
+                  <div className="row-space">
+                    <p className="price">{item.price.total}€</p>
+                    <div className="col-2">              
+                      <button className="btn-submit botaobuy" type="submit">
+                        Buy
+                      </button>
+                      <div className="seats">
+                      <h6>Only {item.numberOfBookableSeats} seats available!</h6>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -160,9 +175,6 @@ const FlightResultsItem = ({ apiData }) => {
                         Restrictions may be placed on smaller passengers
                         traveling alone.
                       </p>
-                    </div>
-                    <div className="lines">
-                      <p>Only {item.numberOfBookableSeats} seats available!</p>
                     </div>
                   </div>
                   <div className="column2">
