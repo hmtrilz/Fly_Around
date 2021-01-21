@@ -54,19 +54,19 @@ const Header = ({ setApiData, setHotelData }) => {
                         <form action="#">
                           <div className="row row-space">
                             <div className="col-2 input-group">
-                              <label className="label">From</label>
+                              <label className="label">Origin</label>
                               <AutoComplete data={AirportsList} />
                             </div>
                             <div id="match-list"></div>
                             <div className="col-2 input-group">
-                              <label className="label">To</label>
+                              <label className="label">Destination</label>
                               <AutoComplete data={AirportsList} />
                             </div>
                             <div id="match-list"></div>
                           </div>
                           <div className="row row-space">
                             <div className="col-2 input-group">
-                              <label className="label">Depart</label>
+                              <label className="label">Depart / Check-In</label>
                               <input
                                 className="input--style-1"
                                 name="depart"
@@ -77,7 +77,7 @@ const Header = ({ setApiData, setHotelData }) => {
                               />
                             </div>
                             <div className="col-2 input-group">
-                              <label className="label">Return</label>
+                              <label className="label">Return / Check-Out</label>
                               <input
                                 className="input--style-1"
                                 name="return"
