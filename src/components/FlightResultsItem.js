@@ -51,7 +51,7 @@ const FlightResultsItem = ({ apiData }) => {
                 {/* partida */}
                 <div className="info">
                   <div id="flights" className="flightitem">
-                    <h4> From </h4>
+                    <h4>Outward Flight</h4>
                     <div className="flightbox">
                       <div className="course-preview">
                         <h3>
@@ -84,7 +84,7 @@ const FlightResultsItem = ({ apiData }) => {
 
                   {/* chegada */}
                   <div id="resultsitem" className="flightitem">
-                    <h4> To </h4>
+                    <h4>Return Flight</h4>
                     <div className="flightbox">
                       <div className="course-preview">
                         <h3>
