@@ -39,7 +39,7 @@ function Navigation() {
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="page-scroll">
+              <a href="#destinations" className="page-scroll">
                 Destinations
               </a>
             </li>
