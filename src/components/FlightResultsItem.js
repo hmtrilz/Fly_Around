@@ -25,7 +25,7 @@ const FlightResultsItem = ({ apiData }) => {
               <span className="icon-bar"></span>{" "}
               <span className="icon-bar"></span>{" "}
             </button>
-            <Link to="/" className="linkazul">
+            <Link to="/">
             <a className="navbar-brand page-scroll" href="#page-top">
               Fly Around
             </a>{" "}
@@ -39,8 +39,8 @@ const FlightResultsItem = ({ apiData }) => {
             <ul className="nav navbar-nav navbar-right">
               
               <li>
-                <Link to="/" className="linkazul">
-                  <a className="page-scroll" href="#page-top">
+                <Link className="linkazul" to="/">
+                  <a className="page-scroll linkazul" href="#page-top">
                     Go Back
                   </a>
                 </Link>
@@ -54,7 +54,7 @@ const FlightResultsItem = ({ apiData }) => {
         apiData
           .filter((item) => item.id === pathID)
           .map((item) => (
-            <div className="margemtop">
+            <div id="info" className="margemtop">
               <div className="infovoo">
                 <h1 className="white-text">
                   {item.itineraries[0].segments[0].departure.iataCode} ➔{" "}
