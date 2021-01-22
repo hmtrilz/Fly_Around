@@ -10,7 +10,7 @@ const FlightResultsItem = ({ apiData }) => {
 
   return (
     <div>
-      <nav id="menu" className="navbar navbar-default navbar-fixed-top">
+       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
         <div className="container">
           <div className="navbar-header">
             <button
@@ -20,14 +20,32 @@ const FlightResultsItem = ({ apiData }) => {
               data-target="#bs-example-navbar-collapse-1"
             >
               {" "}
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span className="sr-only">Toggle navigation</span>{" "}
+              <span className="icon-bar"></span>{" "}
+              <span className="icon-bar"></span>{" "}
+              <span className="icon-bar"></span>{" "}
             </button>
-            <Link to={"/"}>
-              <a className="navbar-brand page-scroll">Fly Around</a>
+            <Link to="/" className="linkazul">
+            <a className="navbar-brand page-scroll" href="#page-top">
+              Fly Around
+            </a>{" "}
             </Link>
+          </div>
+
+          <div
+            className="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul className="nav navbar-nav navbar-right">
+              
+              <li>
+                <Link to="/" className="linkazul">
+                  <a className="page-scroll" href="#page-top">
+                    Go Back
+                  </a>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -114,6 +132,13 @@ const FlightResultsItem = ({ apiData }) => {
                       </div>
                     </div>
                   </div>
+                  <div className="row-space">
+                    <p className="price">{item.price.total}€</p>
+                    <button className="btn-submit botaobuy" type="submit">
+                        Book Flights
+                      </button>        
+                      <h6 className="seats">Only {item.numberOfBookableSeats} seats available!</h6>
+                  </div>
                 </div>
                 {/* informations */}
                 <div className="textarea">
@@ -160,9 +185,6 @@ const FlightResultsItem = ({ apiData }) => {
                         Restrictions may be placed on smaller passengers
                         traveling alone.
                       </p>
-                    </div>
-                    <div className="lines">
-                      <p>Only {item.numberOfBookableSeats} seats available!</p>
                     </div>
                   </div>
                   <div className="column2">

@@ -55,7 +55,7 @@ const FlightResults = ({ apiData, loading }) => {
                 </table>
                 <div className="mover">
                   <p className="price">{resultado.price.total}€</p>
-                  <Link to={`/${resultado.id}`}>
+                  <Link to={`/${resultado.id}`} href="#info">
                     <button className="btn">More info</button>
                   </Link>
                 </div>
