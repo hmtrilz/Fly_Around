@@ -50,7 +50,7 @@
 
 .info::after {
   position: absolute;
-  top: 97rem;
+  top: 101rem;
   content: "";
   background: linear-gradient(to right, #89c2ff 0%, #6372ff 100%);
   align-items: center;
@@ -62,7 +62,7 @@
 .lines::after {
   margin: 5px 0;
   position: absolute;
-  top: 106rem;
+  top: 110rem;
   content: "";
   background: linear-gradient(to right, #89c2ff 0%, #6372ff 100%);
   align-items: center;
@@ -103,8 +103,8 @@
   max-width: 100%;
   margin: 20px;
   overflow: hidden;
-  width: 600px;
-  height: 100px;
+  width: 700px;
+  height: 120px;
 }
 
 .flightitem {
