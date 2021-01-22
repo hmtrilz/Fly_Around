@@ -10,7 +10,7 @@ const FlightResultsItem = ({ apiData }) => {
 
   return (
     <div>
-      <nav id="menu" className="navbar navbar-default navbar-fixed-top">
+       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
         <div className="container">
           <div className="navbar-header">
             <button
@@ -20,18 +20,32 @@ const FlightResultsItem = ({ apiData }) => {
               data-target="#bs-example-navbar-collapse-1"
             >
               {" "}
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button> 
-           
-            <Link to={"/"}>
-                <a className="navbar-brand page-scroll">{" "}Fly Around</a>
-           </Link>
-           <Link to={"/"}>
-                <h5 className="navbar-brand goback page-scroll">{" "}Go back</h5>
-           </Link>
+              <span className="sr-only">Toggle navigation</span>{" "}
+              <span className="icon-bar"></span>{" "}
+              <span className="icon-bar"></span>{" "}
+              <span className="icon-bar"></span>{" "}
+            </button>
+            <Link to="/" className="linkazul">
+            <a className="navbar-brand page-scroll" href="#page-top">
+              Fly Around
+            </a>{" "}
+            </Link>
+          </div>
+
+          <div
+            className="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul className="nav navbar-nav navbar-right">
+              
+              <li>
+                <Link to="/" className="linkazul">
+                  <a className="page-scroll" href="#page-top">
+                    Go Back
+                  </a>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -55,7 +69,7 @@ const FlightResultsItem = ({ apiData }) => {
                 {/* partida */}
                 <div className="info">
                   <div id="flights" className="flightitem">
-                    <h4> From: </h4>
+                    <h4>Outward Flight</h4>
                     <div className="flightbox">
                       <div className="course-preview">
                         <h3>
@@ -88,7 +102,7 @@ const FlightResultsItem = ({ apiData }) => {
 
                   {/* chegada */}
                   <div id="resultsitem" className="flightitem">
-                    <h4> To: </h4>
+                    <h4>Return Flight</h4>
                     <div className="flightbox">
                       <div className="course-preview">
                         <h3>
@@ -120,14 +134,10 @@ const FlightResultsItem = ({ apiData }) => {
                   </div>
                   <div className="row-space">
                     <p className="price">{item.price.total}€</p>
-                    <div className="col-2">              
-                      <button className="btn-submit botaobuy" type="submit">
-                        Buy
-                      </button>
-                      <div className="seats">
-                      <h6>Only {item.numberOfBookableSeats} seats available!</h6>
-                    </div>
-                    </div>
+                    <button className="btn-submit botaobuy" type="submit">
+                        Book Flights
+                      </button>        
+                      <h6 className="seats">Only {item.numberOfBookableSeats} seats available!</h6>
                   </div>
                 </div>
                 {/* informations */}
