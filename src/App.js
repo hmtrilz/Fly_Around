@@ -10,7 +10,7 @@ function App() {
     <Router>
         <Switch>
           <Route exact path="/"> <Home apiData={apiData} setApiData={setApiData} /></Route>
-          <Route path="/:id"><FlightResultsItem apiData={apiData} /></Route>
+          <Route path="/:id"><FlightResultsItem apiData={apiData} /></Route>  
         </Switch>
     </Router>
   );

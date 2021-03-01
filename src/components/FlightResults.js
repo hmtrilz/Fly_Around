@@ -3,9 +3,8 @@ import "../styles/results.css";
 import moment from "moment";
 import { Link } from "react-router-dom";
 
-const FlightResults = ({ apiData, loading }) => {
+const FlightResults = ({ apiData }) => {
   console.log(apiData);
-  console.log(loading);
 
   return (
     <div>

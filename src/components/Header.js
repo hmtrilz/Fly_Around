@@ -7,8 +7,6 @@ import HotelApi from "./HotelApi";
 
 
 const Header = ({ setApiData, setHotelData }) => {
-
-  const [loading, setLoading] = useState(false);
   
   const formHandler = async (e) => {
     e.preventDefault();
@@ -19,7 +17,6 @@ const Header = ({ setApiData, setHotelData }) => {
       e.target.form[3].value
     );
     setApiData(resultados);
-    setLoading(true);
   };
 
   const formHandler2 = async (e) => {
